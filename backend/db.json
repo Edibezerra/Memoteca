@@ -1,6 +1,5 @@
 {
   "pensamentos": [
-
     {
       "id": 1,
       "conteudo": "Que bom que vc veio",
@@ -18,6 +17,24 @@
       "conteudo": "Angular é o melhor'",
       "autoria": "Dev Alura",
       "modelo": "modelo3"
+    },
+    {
+      "conteudo": "Pensamento de teste",
+      "autoria": "Dev angular",
+      "modelo": "modelo1",
+      "id": 4
+    },
+    {
+      "conteudo": "Pensamento de teste",
+      "autoria": "Dev angular",
+      "modelo": "modelo1",
+      "id": 5
+    },
+    {
+      "conteudo": "rhrthrer",
+      "autoria": "trherhtrty",
+      "modelo": "modelo3",
+      "id": 6
     }
   ]
 }
