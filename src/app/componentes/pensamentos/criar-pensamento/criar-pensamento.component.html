@@ -5,22 +5,23 @@
   <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input
-      type="textarea"
-      class="input"
-      id="pensamento"
-      formControlName="conteudo"
-      placeholder="Digite o pensamento"
-        >
+    type="textarea"
+    class="input"
+    id="pensamento"
+    formControlName="conteudo"
+    placeholder="Digite o pensamento"
+    >
   </form>
-  <form>
+  <form [formGroup]="formulario">
     <label for="autoria">Autoria ou fonte</label>
     <input
-      type="text"
-      class="input"
-      id="autoria"
-      formControlName="autoria"
-      placeholder="Digite a autoria ou fonte"
+    type="text"
+    class="input"
+    id="autoria"
+    formControlName="autoria"
+    placeholder="Digite a autoria ou fonte"
     >
+  </form>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
         <div class="radio-modelo">
@@ -88,5 +89,4 @@
       <button (click)="criarPensamento()" class="botao">Salvar</button>
       <button (click)="cancelarAcao()" class="botao">Cancelar</button>
   </div>
-  </form>
 </section>
