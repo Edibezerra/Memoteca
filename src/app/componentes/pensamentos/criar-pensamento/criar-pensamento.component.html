@@ -5,22 +5,29 @@
   <form [formGroup]="formulario">
     <label for="pensamento">Pensamento</label>
     <input
-    type="textarea"
-    class="input"
-    id="pensamento"
-    formControlName="conteudo"
-    placeholder="Digite o pensamento"
+      type="textarea"
+      class="input"
+      id="pensamento"
+      formControlName="conteudo"
+      placeholder="Digite o pensamento"
     >
-  </form>
-  <form [formGroup]="formulario">
+    <div class="mensagem__erro" *ngIf="formulario.get('conteudo')?.errors && formulario.get('conteudo')?.touched">
+      Pensamento é obrigatório!
+    </div>
     <label for="autoria">Autoria ou fonte</label>
     <input
-    type="text"
-    class="input"
-    id="autoria"
-    formControlName="autoria"
-    placeholder="Digite a autoria ou fonte"
+      type="text"
+      class="input"
+      id="autoria"
+      formControlName="autoria"
+      placeholder="Digite a autoria ou fonte"
     >
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['required'] && formulario.get('autoria')?.touched">
+      Autoria é obrigatório!
+    </div>
+    <div class="mensagem__erro" *ngIf="formulario.get('autoria')?.errors?.['minlength']">
+      Autoria precisa ter no mínimo 3 caracteres!
+    </div>
   </form>
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
