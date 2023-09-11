@@ -44,5 +44,11 @@ export class CriarPensamentoComponent implements OnInit {
   cancelarAcao(){
     this.router.navigate(['/listarPensamento'])
   }
-
+  habilitarBotao(): string{
+    if(this.formulario.valid){
+      return 'botao'
+    } else {
+      return 'botao__desabilitado'
+    }
+  }
 }
