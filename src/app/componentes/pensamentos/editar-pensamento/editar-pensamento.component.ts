@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Pensamento } from '../pensamento';
 import { ActivatedRoute, Router } from '@angular/router';
 import { PensamentoService } from '../pensamento.service';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-editar-pensamento',
@@ -9,6 +10,8 @@ import { PensamentoService } from '../pensamento.service';
   styleUrls: ['./editar-pensamento.component.css']
 })
 export class EditarPensamentoComponent implements OnInit {
+
+  formulario!: FormGroup;
 
   pensamento: Pensamento = {
     id: 0,
@@ -38,6 +41,12 @@ export class EditarPensamentoComponent implements OnInit {
 
   cancelarAcao() {
     this.router.navigate(['/listarPensamento'])
+  }
+  habilitarBotao(): string {
+    if(this.formulario.valid) {
+      return "botao"
+    }
+    else return "botao__desabilitado"
   }
 
 }
